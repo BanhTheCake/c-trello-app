@@ -1,0 +1,84 @@
+@import "@/_setting.scss";
+
+$overlay-bg: rgba(0, 0, 0, 0.1);
+$modal-bg: white;
+$modal-min-width: 380px;
+$modal-radius: 10px;
+
+$modal-btn-confirm: #2ecc71;
+$modal-btn-cancel: tomato;
+$modal-btn-color: white;
+$modal-btn-weight: 500;
+
+.Modal-delete {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: $overlay-bg;
+    }
+    .Modal-main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $modal-bg;
+        min-width: $modal-min-width;
+        border-radius: $modal-radius;
+        padding: 1.6rem 2rem;
+        padding-top: 4.4rem;
+        cursor: default;
+        animation: fadeIn 0.2s ease;
+        .icon-wrapper {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            padding: 0.4rem;
+            display: flex;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+        .Modal-delete__button {
+            padding-top: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            button {
+                width: fit-content;
+                background-color: $modal-btn-cancel;
+                padding: 0.6rem 1.4rem;
+                border-radius: $card-radius;
+                font-weight: $modal-btn-weight;
+                cursor: pointer;
+                color: $modal-btn-color;
+                transition: all 0.2s ease;
+
+                &:not(:last-child) {
+                    margin-right: $gap-basic;
+                }
+
+                &:hover {
+                    background-color: darken($modal-btn-cancel, 10%);
+                }
+
+                &.btn-confirm {
+                    background-color: $modal-btn-confirm;
+                    &:hover {
+                        background-color: darken($modal-btn-confirm, 5%);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@import "@/_setting.scss";
+
+$scrollbar-thumb-bg: rgba(255, 255, 255, 0.8);
+$scrollbar-track-bg: rgba(0, 0, 0, 0.1);
+$scrollbar-radius: 10px;
+
+.board-content {
+    flex: 1;
+    font-size: $fontSize-basic;
+    overflow-y: auto;
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: $board-content-padding-bottom;
+
+    &::-webkit-scrollbar {
+        height: $board-content-scrollbar-height;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $scrollbar-thumb-bg;
+        border-radius: $scrollbar-radius;
+    }
+    &::-webkit-scrollbar-track {
+        background: $scrollbar-track-bg;
+        border-radius: $scrollbar-radius;
+    }
+    .cards-drop-preview {
+        background-color: rgba(150, 150, 200, 0.1);
+        border: 1px dashed #abc;
+        margin: 5px;
+        margin-right: calc(1rem + 5px);
+    }
+}

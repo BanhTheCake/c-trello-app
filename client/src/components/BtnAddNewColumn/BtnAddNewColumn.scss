@@ -1,0 +1,89 @@
+@import "@/_setting.scss";
+
+$btn-toggle-bg: rgba(0, 0, 0, 0.2);
+$btn-toggle-color: white;
+
+.btn-add-new {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+
+    width: $card-column-weight;
+
+    &__toggle {
+        width: 100%;
+        padding: 0.6rem 1rem;
+
+        background-color: $btn-toggle-bg;
+        color: $btn-toggle-color;
+        border-radius: $card-radius;
+
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        p {
+            margin-left: $gap-basic;
+            user-select: none;
+        }
+
+        &:hover {
+            background-color: lighten($btn-toggle-bg, 30%);
+            transition: all 0.2s ease;
+        }
+    }
+    &__input {
+        width: 100%;
+        padding: 1rem;
+
+        box-shadow: $card-column-boxShadow;
+        background-color: $card-column-bg;
+        border-radius: $card-radius;
+
+        animation: fadeIn 0.2s ease;
+
+        input {
+            border-radius: inherit;
+            padding: 0.6rem 0.8rem;
+
+            background-color: $btn-input-color;
+            border: $btn-input-border;
+            font-size: $fontSize-basic;
+
+            margin-bottom: $gap-basic;
+        }
+
+        & .btn-add-new__box {
+            display: flex;
+            align-items: center;
+
+            button {
+                width: fit-content;
+                padding: 0.6rem 3.2rem;
+
+                font-size: $fontSize-basic;
+                border-radius: $card-radius;
+                margin-right: $gap-basic;
+                background-color: $btn-input-box-btn-bg;
+
+                cursor: pointer;
+                user-select: none;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    background-color: lighten($btn-input-box-btn-bg, 6%);
+                }
+                color: $btn-input-box-btn-color;
+                font-weight: $btn-input-box-btn-weight;
+            }
+            svg {
+                color: $btn-input-box-icon-bg;
+                cursor: pointer;
+                transition: all 0.15s ease;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

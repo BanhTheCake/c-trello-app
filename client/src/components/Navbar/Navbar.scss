@@ -1,0 +1,11 @@
+@import "@/_setting.scss";
+
+$navbar-bg: #2980b9;
+
+.Navbar {
+    font-size: $fontSize-basic;
+    background-color: $navbar-bg;
+    height: $app-bar-height;
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,66 @@
+@import "@/_setting.scss";
+
+.card-column {
+    width: $card-column-weight;
+    padding: 1rem;
+    margin-right: $gap-basic;
+    max-height: $card-column-max-height;
+    border-radius: $card-radius;
+
+    background-color: $card-column-bg;
+
+    box-shadow: $card-column-boxShadow;
+
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    &__footer {
+        padding-top: 0.8rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        .icon-wrapper {
+            display: flex;
+            padding-right: $gap-basic;
+
+            &.trash {
+                svg {
+                    color: $btn-input-box-icon-bg;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 0.8;
+                        transition: all 0.15s ease;
+                    }
+                }
+            }
+        }
+        p {
+            user-select: none;
+            &:hover {
+                opacity: 0.6;
+                transition: all 0.15s ease;
+            }
+        }
+        button {
+            width: fit-content;
+            padding: 0.6rem 3.2rem;
+
+            font-size: $fontSize-basic;
+            border-radius: $card-radius;
+            margin-right: $gap-basic;
+            background-color: $btn-input-box-btn-bg;
+
+            cursor: pointer;
+            user-select: none;
+
+            color: $btn-input-box-btn-color;
+            font-weight: $btn-input-box-btn-weight;
+
+            &:hover {
+                background-color: lighten($btn-input-box-btn-bg, 6%);
+                transition: all 0.2s ease;
+            }
+        }
+    }
+}

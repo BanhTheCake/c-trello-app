@@ -1,0 +1,103 @@
+@import "@/_setting.scss";
+
+$font-size-title: 1.8rem;
+$font-size-weight: 500;
+$input-background: white;
+$btn-more-hover: rgba(0, 0, 0, 0.1);
+$menu-more-zIndex: 10;
+$menu-more-bg: white;
+$menu-more-border: 1px solid rgba(0, 0, 0, 0.2);
+
+.card-column-header {
+    width: 100%;
+    padding-bottom: 0.6rem;
+
+    display: flex;
+    cursor: pointer;
+
+    .title {
+        margin-right: $gap-basic;
+        flex: 1;
+        display: flex;
+
+        h3 {
+            width: 100%;
+            font-size: $font-size-title;
+            font-weight: $font-size-weight;
+            padding-left: $gap-basic;
+
+            display: flex;
+            align-items: center;
+
+            cursor: pointer !important;
+        }
+
+        input {
+            background-color: $input-background;
+            padding: 0 1rem;
+
+            font-size: $font-size-title;
+            border-radius: $card-radius;
+        }
+    }
+
+    .btn-more {
+        position: relative;
+        .icon-wrapper {
+            padding: 0.4rem 0.8rem;
+            border-radius: $card-radius;
+
+            display: flex;
+            cursor: pointer;
+
+            position: relative;
+            z-index: $menu-more-zIndex;
+
+            &:hover {
+                background-color: $btn-more-hover;
+                transition: all 0.2s ease;
+            }
+        }
+        .menu-more {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: $menu-more-zIndex;
+
+            display: flex;
+            flex-direction: column;
+
+            border-radius: $card-radius;
+            margin-top: $gap-basic;
+
+            box-shadow: $card-column-boxShadow;
+            overflow: hidden;
+
+            p {
+                padding: 0.8rem 1.8rem;
+                background-color: $menu-more-bg;
+
+                white-space: nowrap;
+                user-select: none;
+
+                transition: all 0.1s ease;
+
+                &:not(:last-child) {
+                    border-bottom: $menu-more-border;
+                }
+
+                &:hover {
+                    background-color: darken($menu-more-bg, 10%);
+                }
+            }
+        }
+        .meu-more__overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+        }
+    }
+}

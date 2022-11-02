@@ -1,0 +1,8 @@
+@import "@/_setting.scss";
+
+.board-bar {
+    font-size: $fontSize-basic;
+    height: $app-bar-height;
+    display: flex;
+    align-items: center;
+}

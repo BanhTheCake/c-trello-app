@@ -1,0 +1,35 @@
+// app-bar
+$app-bar-height: 40px;
+
+// board-bar
+$board-bar-height: 40px;
+
+// board-wrapper
+$board-wrapper-padding-bottom: 1rem;
+
+// board-content
+$board-content-height: calc(100vh - ($board-bar-height + $app-bar-height));
+$board-content-padding-bottom: 1rem;
+$board-content-scrollbar-height: 14px;
+
+// card-column
+$card-column-max-height: calc(
+    $board-content-height - $board-wrapper-padding-bottom - $board-content-padding-bottom -
+        $board-content-scrollbar-height
+);
+$card-column-weight: 300px;
+$card-column-boxShadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+$card-column-bg: #ecf0f1;
+
+// other
+$fontSize-basic: 1.6rem;
+$card-radius: 4px;
+$gap-basic: 1rem;
+
+// Button Add
+$btn-input-color: white;
+$btn-input-border: 1px solid rgba(0, 0, 0, 0.5);
+$btn-input-box-btn-bg: #2ecc71;
+$btn-input-box-icon-bg: tomato;
+$btn-input-box-btn-color: white;
+$btn-input-box-btn-weight: 500;

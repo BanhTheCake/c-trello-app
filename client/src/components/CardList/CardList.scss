@@ -1,0 +1,47 @@
+@import "@/_setting.scss";
+
+$scrollbar-bg: darkgrey;
+$scrollbar-width: 8px;
+$scrollbar-radius: 8px;
+
+.card-list {
+    flex: 1;
+    padding-right: 0.8rem;
+    overflow-y: auto;
+    width: 100%;
+
+    &::-webkit-scrollbar {
+        width: $scrollbar-width;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $scrollbar-bg;
+        border-radius: $scrollbar-radius;
+    }
+    .card-ghost {
+        transition: transform 0.18s ease;
+        transform: rotateZ(3deg);
+    }
+    .card-ghost-drop {
+        transition: transform 0.18s ease-in-out;
+        transform: rotateZ(0deg);
+    }
+    .card-drop-preview {
+        background-color: rgba(150, 150, 200, 0.1);
+        border: 1px dashed #abc;
+        margin: 5px;
+    }
+    .card-item__textarea {
+        padding-top: $gap-basic;
+        textarea {
+            background-color: white;
+            border-radius: $card-radius;
+            padding: 1rem;
+            font-size: $fontSize-basic;
+            resize: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+}

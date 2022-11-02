@@ -1,0 +1,33 @@
+@import "@/_setting.scss";
+
+$card-item-bg: white;
+
+.card-item {
+    width: 100%;
+    background-color: $card-item-bg;
+    border-radius: $card-radius;
+    overflow: hidden;
+    margin-top: calc($gap-basic / 2);
+    margin-bottom: calc($gap-basic / 2);
+
+    &__img {
+        margin: 1rem;
+        margin-bottom: 0;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        border-radius: $card-radius;
+    }
+
+    &__title {
+        padding: 1rem;
+        white-space: pre-wrap;
+    }
+
+    &__content {
+        padding: 0.6rem 1rem;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
