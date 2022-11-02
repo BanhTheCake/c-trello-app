@@ -3,6 +3,49 @@
 .board-bar {
     font-size: $fontSize-basic;
     height: $app-bar-height;
+    margin-bottom: $gap-basic;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    .separation {
+        height: 20px;
+        width: 0px;
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        margin-right: $btn-tag-space;
+    }
+    .board-bar__left {
+        display: flex;
+        align-items: center;
+        .member-list {
+            display: flex;
+            gap: 0.8rem;
+            .img-wrapper {
+                border-radius: 50%;
+                width: calc($app-bar-height - 10px);
+                height: calc($app-bar-height - 10px);
+
+                overflow: hidden;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .rest-member {
+                border-radius: 50%;
+                width: calc($app-bar-height - 10px);
+                height: calc($app-bar-height - 10px);
+                overflow: hidden;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(255, 255, 255, 0.2);
+                color: white;
+                margin-right: 1.4rem;
+            }
+        }
+    }
 }

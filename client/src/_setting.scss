@@ -1,8 +1,8 @@
 // app-bar
-$app-bar-height: 40px;
+$app-bar-height: 46px;
 
 // board-bar
-$board-bar-height: 40px;
+$board-bar-height: 46px;
 
 // board-wrapper
 $board-wrapper-padding-bottom: 1rem;
@@ -25,6 +25,7 @@ $card-column-bg: #ecf0f1;
 $fontSize-basic: 1.6rem;
 $card-radius: 4px;
 $gap-basic: 1rem;
+$letter-spacing: 0.02em;
 
 // Button Add
 $btn-input-color: white;
@@ -33,3 +34,8 @@ $btn-input-box-btn-bg: #2ecc71;
 $btn-input-box-icon-bg: tomato;
 $btn-input-box-btn-color: white;
 $btn-input-box-btn-weight: 500;
+
+// Button-tag-navigation
+$btn-tag-space: 1rem;
+$btn-tag-gap: 0.8rem;
+$btn-tag-radius: 3px;

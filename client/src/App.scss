@@ -29,7 +29,7 @@ html {
 .board-wrapper {
     flex: 1;
     background-color: $board-bg;
-    padding: 0 1rem;
+    padding: 0 $gap-basic;
     display: flex;
     flex-direction: column;
     padding-bottom: $board-wrapper-padding-bottom;
@@ -49,6 +49,37 @@ img {
     border: none;
     background-color: transparent;
     width: 100%;
+}
+
+.btn-tag {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 0.7rem;
+
+    margin-right: $btn-tag-space;
+    border-radius: $btn-tag-radius;
+    letter-spacing: $letter-spacing;
+    gap: $btn-tag-gap;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+
+    &.hover:hover {
+        opacity: 0.6;
+    }
+
+    & input {
+        color: white;
+        font-size: $fontSize-basic;
+
+        &::placeholder {
+            color: white;
+            letter-spacing: $letter-spacing;
+        }
+    }
 }
 
 @keyframes fadeIn {
