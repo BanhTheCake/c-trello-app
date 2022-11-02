@@ -3,6 +3,7 @@ $app-bar-height: 46px;
 
 // board-bar
 $board-bar-height: 46px;
+$board-bar-mb: 1rem;
 
 // board-wrapper
 $board-wrapper-padding-bottom: 1rem;
@@ -15,7 +16,7 @@ $board-content-scrollbar-height: 14px;
 // card-column
 $card-column-max-height: calc(
     $board-content-height - $board-wrapper-padding-bottom - $board-content-padding-bottom -
-        $board-content-scrollbar-height
+        $board-content-scrollbar-height - $board-bar-mb
 );
 $card-column-weight: 300px;
 $card-column-boxShadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
